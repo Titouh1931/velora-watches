@@ -1,747 +1,1029 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VELORA Montres</title>
+
+<meta name="description"
+content="VELORA Montres - متجر ساعات رجالية ونسائية في الجزائر مع الدفع عند الاستلام والتوصيل إلى 58 ولاية.">
+
+<title>VELORA Montres | ساعات رجالية ونسائية</title>
 
 <style>
+
+/* =========================
+   GENERAL
+========================= */
+
 :root{
-  --black:#0a0a0a;
-  --dark:#141414;
-  --gold:#c9a45c;
-  --gold2:#e3c57e;
-  --light:#f7f5f1;
-  --white:#ffffff;
-  --gray:#777;
+    --black:#080808;
+    --dark:#111111;
+    --dark2:#181818;
+    --gold:#c9a052;
+    --gold-light:#e6c77a;
+    --white:#ffffff;
+    --light:#f6f5f2;
+    --gray:#777;
+    --border:#e6e6e6;
+    --green:#25D366;
 }
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Tahoma,Arial,sans-serif;
-  background:var(--light);
-  color:#151515;
+    font-family:Tahoma,Arial,sans-serif;
+    background:var(--light);
+    color:#151515;
+    line-height:1.6;
 }
 
-/* HEADER */
+a{
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(8,8,8,.97);
-  color:white;
-  border-bottom:1px solid #242424;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.97);
+    border-bottom:1px solid #232323;
+    backdrop-filter:blur(10px);
 }
 
 .nav{
-  max-width:1200px;
-  margin:auto;
-  height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 18px;
+    max-width:1200px;
+    height:78px;
+    margin:auto;
+    padding:0 18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
+    display:flex;
+    align-items:center;
+    gap:11px;
 }
 
 .brand img{
-  width:50px;
-  height:50px;
-  object-fit:contain;
-  border-radius:50%;
+    width:54px;
+    height:54px;
+    object-fit:contain;
+    border-radius:50%;
 }
 
 .brand-text strong{
-  display:block;
-  letter-spacing:2px;
-  font-size:18px;
+    display:block;
+    color:white;
+    font-size:18px;
+    letter-spacing:2px;
 }
 
-.brand-text span{
-  color:var(--gold);
-  font-size:11px;
+.brand-text small{
+    display:block;
+    color:var(--gold);
+    font-size:9px;
+    letter-spacing:1px;
 }
 
 .nav-links{
-  display:flex;
-  align-items:center;
-  gap:22px;
+    display:flex;
+    gap:23px;
+    align-items:center;
 }
 
 .nav-links a{
-  color:#eee;
-  text-decoration:none;
-  font-size:14px;
+    color:#eee;
+    font-size:14px;
 }
 
-.cart{
-  background:var(--gold);
-  color:#111!important;
-  padding:9px 14px;
-  border-radius:20px;
-  font-weight:bold;
+.nav-links a:hover{
+    color:var(--gold-light);
 }
 
-/* HERO */
+.nav-order{
+    background:var(--gold);
+    color:#111 !important;
+    padding:9px 16px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
-  min-height:520px;
-  display:flex;
-  align-items:center;
-  background:
-  radial-gradient(circle at 20% 40%,#302619 0%,transparent 35%),
-  linear-gradient(135deg,#080808,#151515);
-  color:white;
-  overflow:hidden;
+    min-height:590px;
+    background:
+        radial-gradient(circle at 15% 40%,#332919 0%,transparent 35%),
+        linear-gradient(135deg,#070707,#151515);
+
+    color:white;
+    overflow:hidden;
 }
 
 .hero-inner{
-  max-width:1200px;
-  width:100%;
-  margin:auto;
-  padding:70px 20px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+    max-width:1200px;
+    margin:auto;
+    min-height:590px;
+    padding:60px 20px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
 }
 
 .hero-content small{
-  color:var(--gold2);
-  font-size:14px;
+    color:var(--gold-light);
+    letter-spacing:2px;
 }
 
 .hero-content h1{
-  font-size:52px;
-  line-height:1.25;
-  margin:12px 0 18px;
+    font-size:52px;
+    line-height:1.25;
+    margin:15px 0;
 }
 
 .hero-content h1 span{
-  color:var(--gold);
+    color:var(--gold);
 }
 
 .hero-content p{
-  color:#cfcfcf;
-  line-height:1.9;
-  max-width:520px;
+    color:#cfcfcf;
+    max-width:560px;
+    line-height:2;
 }
 
 .hero-buttons{
-  margin-top:28px;
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
 }
 
 .btn{
-  border:0;
-  text-decoration:none;
-  cursor:pointer;
-  padding:14px 25px;
-  border-radius:8px;
-  font-size:15px;
-  transition:.2s;
+    padding:14px 25px;
+    border-radius:8px;
+    display:inline-block;
+    border:0;
+    cursor:pointer;
 }
 
 .btn-gold{
-  background:var(--gold);
-  color:#111;
-  font-weight:bold;
+    background:var(--gold);
+    color:#111;
+    font-weight:bold;
 }
 
 .btn-outline{
-  background:transparent;
-  color:white;
-  border:1px solid #555;
+    border:1px solid #555;
+    color:white;
 }
 
-.hero-card{
-  display:flex;
-  justify-content:center;
+.hero-watch{
+    display:flex;
+    justify-content:center;
 }
 
-.hero-card img{
-  width:min(390px,100%);
-  border-radius:24px;
-  box-shadow:0 25px 70px rgba(0,0,0,.45);
+.hero-watch img{
+    width:min(420px,100%);
+    max-height:500px;
+    object-fit:contain;
+    background:white;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 30px 80px rgba(0,0,0,.5);
 }
 
-/* TRUST */
+/* =========================
+   TRUST
+========================= */
 
 .trust{
-  background:white;
-  border-bottom:1px solid #e8e8e8;
+    background:white;
+    border-bottom:1px solid #eee;
 }
 
-.trust-inner{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  text-align:center;
+.trust-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
 }
 
 .trust-item{
-  padding:22px 10px;
-  border-left:1px solid #eee;
+    text-align:center;
+    padding:24px 10px;
+    border-left:1px solid #eee;
 }
 
 .trust-item:last-child{
-  border-left:0;
+    border-left:none;
 }
 
-.trust-item .icon{
-  font-size:24px;
+.trust-icon{
+    font-size:25px;
 }
 
 .trust-item strong{
-  display:block;
-  margin-top:6px;
-  font-size:14px;
+    display:block;
+    margin-top:6px;
 }
 
 .trust-item span{
-  display:block;
-  color:#777;
-  font-size:12px;
-  margin-top:3px;
+    display:block;
+    font-size:12px;
+    color:#888;
+    margin-top:3px;
 }
 
-/* SECTIONS */
+/* =========================
+   MAIN SECTIONS
+========================= */
 
 .section{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 18px;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 18px;
 }
 
 .section-title{
-  text-align:center;
-  margin-bottom:35px;
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.section-title span{
-  color:var(--gold);
-  font-size:13px;
+.section-title small{
+    color:#a88136;
+    letter-spacing:2px;
 }
 
 .section-title h2{
-  font-size:32px;
-  margin-top:7px;
+    font-size:33px;
+    margin-top:5px;
 }
 
 .section-title p{
-  color:#777;
-  margin-top:10px;
+    color:#777;
+    margin-top:8px;
 }
 
-/* FILTERS */
+/* =========================
+   FILTERS
+========================= */
 
 .filters{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-bottom:30px;
-  flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:32px;
 }
 
 .filter-btn{
-  border:1px solid #ddd;
-  background:white;
-  padding:10px 18px;
-  border-radius:22px;
-  cursor:pointer;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:25px;
+    padding:10px 20px;
+    cursor:pointer;
 }
 
 .filter-btn.active{
-  background:#111;
-  color:white;
+    background:#111;
+    color:white;
 }
 
-/* PRODUCTS */
+/* =========================
+   PRODUCTS
+========================= */
 
 .products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
 .product{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid #eee;
-  transition:.25s;
+    background:white;
+    border:1px solid #eee;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.25s;
 }
 
 .product:hover{
-  transform:translateY(-5px);
-  box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transform:translateY(-5px);
+    box-shadow:0 17px 40px rgba(0,0,0,.08);
 }
 
 .product-image{
-  position:relative;
-  height:340px;
-  background:#fafafa;
+    height:350px;
+    position:relative;
+    background:#fafafa;
 }
 
 .product-image img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
+    width:100%;
+    height:100%;
+    object-fit:contain;
 }
 
 .badge{
-  position:absolute;
-  top:14px;
-  right:14px;
-  background:#111;
-  color:white;
-  padding:7px 11px;
-  border-radius:20px;
-  font-size:12px;
+    position:absolute;
+    right:14px;
+    top:14px;
+
+    background:#111;
+    color:white;
+    border-radius:20px;
+    padding:6px 12px;
+    font-size:12px;
 }
 
 .product-info{
-  padding:18px;
+    padding:19px;
 }
 
-.category{
-  color:#999;
-  font-size:12px;
+.product-category{
+    color:#999;
+    font-size:12px;
 }
 
 .product h3{
-  font-size:20px;
-  margin:6px 0;
+    margin:5px 0;
+    font-size:21px;
 }
 
 .rating{
-  color:#c69c47;
-  font-size:13px;
+    color:#c99f46;
+    font-size:13px;
 }
 
 .price-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-top:15px;
 }
 
 .price{
-  font-size:21px;
-  font-weight:bold;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.product button{
-  background:#111;
-  color:white;
-  border:0;
-  padding:11px 17px;
-  border-radius:7px;
-  cursor:pointer;
+.buy-btn{
+    background:#111;
+    color:white;
+    border:0;
+    padding:11px 18px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-/* ORDER */
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-text p{
+    color:#666;
+    line-height:2;
+}
+
+.about-box{
+    background:#111;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+}
+
+.about-box h2{
+    margin-bottom:12px;
+}
+
+.about-box p{
+    color:#bbb;
+}
+
+.about-list{
+    display:grid;
+    gap:10px;
+    margin-top:20px;
+}
+
+.about-list div{
+    background:#1d1d1d;
+    border-radius:8px;
+    padding:12px;
+}
+
+/* =========================
+   ORDER FORM
+========================= */
 
 .order-section{
-  background:#101010;
-  color:white;
+    max-width:none;
+    background:#0c0c0c;
+}
+
+.order-container{
+    max-width:900px;
+    margin:auto;
+    padding:70px 18px;
 }
 
 .order-box{
-  max-width:900px;
-  margin:auto;
-  background:#171717;
-  padding:35px;
-  border-radius:20px;
-  border:1px solid #2b2b2b;
+    background:#161616;
+    color:white;
+    padding:35px;
+    border:1px solid #292929;
+    border-radius:20px;
 }
 
-.order-box h2{
-  text-align:center;
-  margin-bottom:7px;
+.order-title{
+    text-align:center;
+    margin-bottom:28px;
 }
 
-.order-box > p{
-  text-align:center;
-  color:#aaa;
-  margin-bottom:30px;
+.order-title h2{
+    font-size:30px;
+}
+
+.order-title p{
+    color:#aaa;
+    margin-top:5px;
 }
 
 .form-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
 .field{
-  margin-bottom:15px;
+    margin-bottom:4px;
 }
 
 .field.full{
-  grid-column:1/-1;
+    grid-column:1/-1;
 }
 
 label{
-  display:block;
-  margin-bottom:7px;
-  color:#ddd;
-  font-size:14px;
+    display:block;
+    font-size:14px;
+    margin-bottom:6px;
+    color:#ddd;
 }
 
-input,select,textarea{
-  width:100%;
-  padding:14px;
-  border-radius:8px;
-  border:1px solid #373737;
-  background:#101010;
-  color:white;
-  font-size:15px;
+input,
+select,
+textarea{
+    width:100%;
+    background:#0d0d0d;
+    color:white;
+    border:1px solid #373737;
+    border-radius:8px;
+    padding:14px;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:var(--gold);
 }
 
 input::placeholder,
 textarea::placeholder{
-  color:#777;
+    color:#666;
 }
 
 .order-summary{
-  background:#0d0d0d;
-  border-radius:10px;
-  padding:16px;
-  margin:8px 0 20px;
+    background:#0d0d0d;
+    border-radius:12px;
+    padding:18px;
+    margin:20px 0;
 }
 
 .summary-line{
-  display:flex;
-  justify-content:space-between;
-  margin:8px 0;
-  color:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:8px 0;
+    color:#ddd;
 }
 
 .summary-total{
-  padding-top:10px;
-  margin-top:10px;
-  border-top:1px solid #333;
-  font-size:18px;
-  color:var(--gold2);
+    border-top:1px solid #333;
+    padding-top:12px;
+    margin-top:12px;
+    color:var(--gold-light);
+    font-size:19px;
 }
 
-.whatsapp-btn{
-  width:100%;
-  padding:15px;
-  border:0;
-  border-radius:9px;
-  background:#25D366;
-  color:white;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
+.delivery-note{
+    color:#777;
+    font-size:12px;
+    margin-top:7px;
 }
 
-/* ABOUT */
-
-.about{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
-  align-items:center;
+.payment-box{
+    background:#191919;
+    border:1px solid #333;
+    padding:14px;
+    border-radius:8px;
+    margin-bottom:17px;
+    text-align:center;
 }
 
-.about-card{
-  background:#111;
-  color:white;
-  padding:40px;
-  border-radius:20px;
+.whatsapp-order{
+    width:100%;
+    border:0;
+    background:var(--green);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    padding:15px;
+    border-radius:9px;
+    cursor:pointer;
 }
 
-.about-card h2{
-  font-size:30px;
-  margin-bottom:15px;
-}
-
-.about-card p{
-  color:#ccc;
-  line-height:1.9;
-}
-
-.about-points{
-  margin-top:20px;
-  display:grid;
-  gap:12px;
-}
-
-.about-point{
-  background:#1b1b1b;
-  padding:13px;
-  border-radius:8px;
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-  background:#080808;
-  color:#aaa;
-  padding:45px 18px 25px;
+    background:#070707;
+    color:#aaa;
+    padding:45px 18px 25px;
 }
 
-.footer-inner{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:30px;
+.footer-grid{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:30px;
 }
 
 .footer-brand img{
-  width:80px;
+    width:95px;
+    max-height:95px;
+    object-fit:contain;
 }
 
 .footer-brand h3{
-  color:white;
-  margin:10px 0;
+    color:white;
+    margin:8px 0;
+}
+
+.footer-brand p{
+    max-width:400px;
+}
+
+.footer-title{
+    color:white;
+    margin-bottom:14px;
 }
 
 footer a{
-  color:#bbb;
-  display:block;
-  text-decoration:none;
-  margin:8px 0;
+    display:block;
+    color:#bbb;
+    margin:7px 0;
 }
 
 .copyright{
-  max-width:1100px;
-  margin:30px auto 0;
-  padding-top:20px;
-  border-top:1px solid #222;
-  text-align:center;
-  font-size:12px;
+    max-width:1100px;
+    margin:35px auto 0;
+    border-top:1px solid #222;
+    padding-top:20px;
+    text-align:center;
+    font-size:12px;
 }
 
-/* FLOATING WHATSAPP */
+/* =========================
+   WHATSAPP FLOAT BUTTON
+========================= */
 
 .float-whatsapp{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  width:55px;
-  height:55px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:#25D366;
-  color:white;
-  font-size:25px;
-  text-decoration:none;
-  z-index:999;
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    z-index:1000;
+
+    width:58px;
+    height:58px;
+
+    background:var(--green);
+    color:white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:27px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.28);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
-  .hero-inner{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
 
-  .hero-content p{
-    margin:auto;
-  }
+    .nav-links a:not(.nav-order){
+        display:none;
+    }
 
-  .hero-buttons{
-    justify-content:center;
-  }
+    .hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-  .hero-content h1{
-    font-size:38px;
-  }
+    .hero-content p{
+        margin:auto;
+    }
 
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .hero-buttons{
+        justify-content:center;
+    }
 
-  .trust-inner{
-    grid-template-columns:repeat(2,1fr);
-  }
+    .hero-content h1{
+        font-size:40px;
+    }
 
-  .about{
-    grid-template-columns:1fr;
-  }
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .footer-inner{
-    grid-template-columns:1fr;
-  }
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .nav-links a:not(.cart){
-    display:none;
-  }
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
 }
 
-@media(max-width:550px){
-  .products{
-    grid-template-columns:1fr;
-  }
+@media(max-width:560px){
 
-  .form-grid{
-    grid-template-columns:1fr;
-  }
+    .brand-text small{
+        display:none;
+    }
 
-  .hero{
-    min-height:auto;
-  }
+    .brand img{
+        width:46px;
+        height:46px;
+    }
 
-  .hero-content h1{
-    font-size:34px;
-  }
+    .hero{
+        min-height:auto;
+    }
 
-  .trust-item{
-    border-bottom:1px solid #eee;
-  }
+    .hero-inner{
+        min-height:auto;
+        padding:45px 16px;
+    }
+
+    .hero-content h1{
+        font-size:34px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:320px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .trust-item{
+        border-bottom:1px solid #eee;
+    }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <div class="nav">
 
 <div class="brand">
-<img src="logo.png" alt="VELORA">
+
+<img
+src="file_0000000085f881f49a05afd1571aba10.png"
+alt="VELORA Montres">
+
 <div class="brand-text">
 <strong>VELORA MONTRES</strong>
-<span>L'ÉLÉGANCE À CHAQUE INSTANT</span>
-</div>
+<small>L'ÉLÉGANCE À CHAQUE INSTANT</small>
 </div>
 
-<nav class="nav-links">
+</div>
+
+
+<div class="nav-links">
+
 <a href="#home">الرئيسية</a>
+
 <a href="#products">الساعات</a>
+
 <a href="#about">من نحن</a>
-<a href="#order" class="cart">اطلب الآن</a>
-</nav>
+
+<a href="#order" class="nav-order">
+اطلب الآن
+</a>
 
 </div>
+
+</div>
+
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
+
 <div class="hero-inner">
 
 <div class="hero-content">
 
-<small>VELORA MONTRES • ALGÉRIE</small>
+<small>
+VELORA MONTRES • ALGÉRIE
+</small>
 
 <h1>
 أناقتك تبدأ من
-<span>تفاصيل الوقت</span>
+<span>
+تفاصيل الوقت
+</span>
 </h1>
 
 <p>
-اكتشف تشكيلة VELORA المختارة من الساعات الرجالية والنسائية.
-تصميم أنيق، أسعار مناسبة وتوصيل إلى مختلف ولايات الجزائر مع الدفع عند الاستلام.
+
+اكتشف تشكيلة VELORA Montres من الساعات الرجالية والنسائية.
+
+ساعات بتصاميم أنيقة وأسعار مناسبة، مع التوصيل عبر الجزائر والدفع عند الاستلام.
+
 </p>
 
+
 <div class="hero-buttons">
-<a href="#products" class="btn btn-gold">اكتشف الساعات</a>
-<a href="#order" class="btn btn-outline">اطلب الآن</a>
-</div>
+
+<a
+href="#products"
+class="btn btn-gold">
+اكتشف الساعات
+</a>
+
+<a
+href="#order"
+class="btn btn-outline">
+اطلب الآن
+</a>
 
 </div>
 
-<div class="hero-card">
-<img src="DZ2237_00QQQ_01_F.jpg" alt="VELORA WATCH">
+</div>
+
+
+<div class="hero-watch">
+
+<img
+src="DZ2237_00QQQ_01_F.jpg"
+alt="WATCH">
+
 </div>
 
 </div>
+
 </section>
 
 
-<div class="trust">
+<!-- =========================
+     TRUST
+========================= -->
 
-<div class="trust-inner">
+<section class="trust">
 
-<div class="trust-item">
-<div class="icon">🚚</div>
-<strong>توصيل عبر الجزائر</strong>
-<span>إلى مختلف الولايات</span>
-</div>
+<div class="trust-grid">
 
 <div class="trust-item">
-<div class="icon">💵</div>
-<strong>الدفع عند الاستلام</strong>
-<span>اطلب وادفع عند وصول الطلب</span>
+
+<div class="trust-icon">
+🚚
 </div>
+
+<strong>
+التوصيل عبر الجزائر
+</strong>
+
+<span>
+إلى 58 ولاية
+</span>
+
+</div>
+
 
 <div class="trust-item">
-<div class="icon">💬</div>
-<strong>طلب عبر WhatsApp</strong>
-<span>طلب سريع ومباشر</span>
+
+<div class="trust-icon">
+💵
 </div>
+
+<strong>
+الدفع عند الاستلام
+</strong>
+
+<span>
+ادفع عند وصول طلبك
+</span>
+
+</div>
+
 
 <div class="trust-item">
-<div class="icon">⌚</div>
-<strong>ساعات مختارة</strong>
-<span>تصاميم رجالية ونسائية</span>
+
+<div class="trust-icon">
+💬
+</div>
+
+<strong>
+الطلب عبر WhatsApp
+</strong>
+
+<span>
+طلب سريع وسهل
+</span>
+
+</div>
+
+
+<div class="trust-item">
+
+<div class="trust-icon">
+⌚
+</div>
+
+<strong>
+تشكيلة مختارة
+</strong>
+
+<span>
+رجالية ونسائية
+</span>
+
 </div>
 
 </div>
 
-</div>
+</section>
 
 
-<section class="section" id="products">
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section
+class="section"
+id="products">
+
 
 <div class="section-title">
-<span>VELORA COLLECTION</span>
-<h2>اكتشف مجموعتنا</h2>
-<p>اختر الساعة التي تناسب أسلوبك</p>
+
+<small>
+VELORA COLLECTION
+</small>
+
+<h2>
+اكتشف مجموعتنا
+</h2>
+
+<p>
+اختر الساعة التي تناسب أسلوبك
+</p>
+
 </div>
 
+
 <div class="filters">
-<button class="filter-btn active">الكل</button>
-<button class="filter-btn">رجالي</button>
-<button class="filter-btn">نسائي</button>
+
+<button
+class="filter-btn active"
+onclick="filterProducts('all',this)">
+الكل
+</button>
+
+<button
+class="filter-btn"
+onclick="filterProducts('homme',this)">
+رجالي
+</button>
+
+<button
+class="filter-btn"
+onclick="filterProducts('femme',this)">
+نسائي
+</button>
+
 </div>
 
 
 <div class="products">
 
-<div class="product">
+
+<!-- PRODUCT 1 -->
+
+<div
+class="product"
+data-category="homme">
 
 <div class="product-image">
 
-<span class="badge">رجالي</span>
+<span class="badge">
+رجالي
+</span>
 
-<img src="DZ2237_00QQQ_01_F.jpg" alt="WATCH">
+<img
+src="DZ2237_00QQQ_01_F.jpg"
+alt="WATCH">
 
 </div>
 
+
 <div class="product-info">
 
-<div class="category">VELORA • HOMME</div>
+<div class="product-category">
 
-<h3>WATCH</h3>
+VELORA • HOMME
 
-<div class="rating">★★★★★</div>
+</div>
+
+<h3>
+WATCH
+</h3>
+
+<div class="rating">
+★★★★★
+</div>
+
 
 <div class="price-row">
 
@@ -749,8 +1031,10 @@ footer a{
 2 600 دج
 </div>
 
-<button onclick="selectProduct('WATCH',2600)">
-اطلب
+<button
+class="buy-btn"
+onclick="selectProduct('WATCH',2600)">
+اطلب الآن
 </button>
 
 </div>
@@ -759,44 +1043,84 @@ footer a{
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<section class="section" id="about">
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="section"
+id="about">
 
 <div class="about">
 
-<div>
 
-<div class="section-title" style="text-align:right">
-<span>VELORA MONTRES</span>
-<h2>الوقت جزء من أناقتك</h2>
+<div class="about-text">
+
+<div
+class="section-title"
+style="text-align:right">
+
+<small>
+VELORA MONTRES
+</small>
+
+<h2>
+الوقت جزء من أناقتك
+</h2>
+
 </div>
 
-<p style="line-height:2;color:#666">
-نحن نختار لك ساعات تجمع بين التصميم الأنيق والسعر المناسب.
-هدفنا تقديم تجربة شراء بسيطة وسريعة للزبون الجزائري،
-من اختيار الساعة إلى تأكيد الطلب والتوصيل.
-</p>
-
-</div>
-
-
-<div class="about-card">
-
-<h2>لماذا VELORA؟</h2>
 
 <p>
-تجربة شراء مصممة لتكون واضحة وسريعة، خاصة من الهاتف.
+
+في VELORA Montres نختار لك ساعات تجمع بين الأناقة والسعر المناسب.
+
+هدفنا هو توفير تجربة شراء بسيطة وسريعة للزبون الجزائري، بداية من اختيار الساعة إلى تأكيد الطلب والتوصيل.
+
 </p>
 
-<div class="about-points">
-<div class="about-point">✓ الدفع عند الاستلام</div>
-<div class="about-point">✓ الطلب مباشرة عبر WhatsApp</div>
-<div class="about-point">✓ توصيل إلى 58 ولاية</div>
-<div class="about-point">✓ دعم ومتابعة الطلب</div>
+</div>
+
+
+<div class="about-box">
+
+<h2>
+لماذا VELORA؟
+</h2>
+
+<p>
+تجربة شراء مصممة لتكون واضحة وسريعة ومريحة خاصة من الهاتف.
+</p>
+
+
+<div class="about-list">
+
+<div>
+✓ الدفع عند الاستلام
+</div>
+
+<div>
+✓ الطلب مباشرة عبر WhatsApp
+</div>
+
+<div>
+✓ التوصيل إلى 58 ولاية
+</div>
+
+<div>
+✓ إمكانية اختيار الكمية
+</div>
+
+<div>
+✓ متابعة الطلب مع الزبون
+</div>
+
 </div>
 
 </div>
@@ -806,57 +1130,150 @@ footer a{
 </section>
 
 
-<section class="section order-section" id="order">
+<!-- =========================
+     ORDER
+========================= -->
+
+<section
+class="order-section"
+id="order">
+
+<div class="order-container">
 
 <div class="order-box">
 
-<h2>إتمام الطلب</h2>
-<p>أدخل معلوماتك وسيتم إرسال الطلب مباشرة إلى WhatsApp الخاص بنا.</p>
+
+<div class="order-title">
+
+<h2>
+إتمام الطلب
+</h2>
+
+<p>
+أدخل معلوماتك وسيتم إرسال الطلب مباشرة إلى WhatsApp الخاص بالمتجر
+</p>
+
+</div>
 
 
-<form onsubmit="sendOrder(event)">
+<form
+onsubmit="sendOrder(event)">
+
 
 <div class="form-grid">
 
-<div class="field">
-<label>الاسم واللقب</label>
-<input id="name" required placeholder="مثال: محمد أحمد">
-</div>
 
 <div class="field">
-<label>رقم الهاتف</label>
+
+<label>
+الاسم واللقب
+</label>
+
+<input
+id="name"
+required
+placeholder="مثال: محمد أحمد">
+
+</div>
+
+
+<div class="field">
+
+<label>
+رقم الهاتف
+</label>
+
 <input
 id="phone"
-required
 type="tel"
-placeholder="0550 00 00 00">
+required
+placeholder="مثال: 0550000000">
+
 </div>
 
+
 <div class="field">
-<label>المنتج</label>
-<input id="product" value="WATCH" readonly>
+
+<label>
+المنتج
+</label>
+
+<input
+id="product"
+value="WATCH"
+readonly>
+
 </div>
 
-<div class="field">
-<label>الكمية</label>
 
-<select id="quantity" onchange="updateTotal()">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
+<div class="field">
+
+<label>
+الكمية
+</label>
+
+<select
+id="quantity"
+onchange="updateTotal()">
+
+<option value="1">
+1
+</option>
+
+<option value="2">
+2
+</option>
+
+<option value="3">
+3
+</option>
+
+<option value="4">
+4
+</option>
+
+<option value="5">
+5
+</option>
+
+<option value="6">
+6
+</option>
+
+<option value="7">
+7
+</option>
+
+<option value="8">
+8
+</option>
+
+<option value="9">
+9
+</option>
+
+<option value="10">
+10
+</option>
+
 </select>
 
 </div>
 
 
 <div class="field">
-<label>الولاية</label>
 
-<select id="wilaya" required>
+<label>
+الولاية
+</label>
 
-<option value="">اختر الولاية</option>
+<select
+id="wilaya"
+required>
+
+<option value="">
+اختر الولاية
+</option>
 
 <option>01 - أدرار</option>
 <option>02 - الشلف</option>
@@ -921,71 +1338,144 @@ placeholder="0550 00 00 00">
 
 </div>
 
+
 <div class="field">
-<label>البلدية</label>
-<input id="commune" required placeholder="اكتب البلدية">
+
+<label>
+البلدية
+</label>
+
+<input
+id="commune"
+required
+placeholder="اكتب البلدية">
+
 </div>
 
+
 <div class="field full">
-<label>العنوان الكامل</label>
+
+<label>
+العنوان الكامل
+</label>
+
 <textarea
 id="address"
-required
 rows="3"
+required
 placeholder="الحي، الشارع، رقم المنزل أو أي معلومات تساعد في التوصيل"></textarea>
+
 </div>
+
 
 </div>
 
 
 <div class="order-summary">
 
-<div class="summary-line">
-<span>سعر الساعة</span>
-<strong>2 600 دج</strong>
-</div>
 
 <div class="summary-line">
-<span>الكمية</span>
-<strong id="qtyDisplay">1</strong>
+
+<span>
+سعر الوحدة
+</span>
+
+<strong
+id="unitPrice">
+2 600 دج
+</strong>
+
 </div>
+
+
+<div class="summary-line">
+
+<span>
+الكمية
+</span>
+
+<strong
+id="qtyDisplay">
+1
+</strong>
+
+</div>
+
 
 <div class="summary-line summary-total">
-<span>المجموع بدون التوصيل</span>
-<strong id="total">2 600 دج</strong>
+
+<span>
+المجموع بدون التوصيل
+</span>
+
+<strong
+id="total">
+2 600 دج
+</strong>
+
 </div>
 
-<div style="font-size:12px;color:#777;margin-top:8px">
-سعر التوصيل يتم تأكيده مع الزبون حسب الولاية.
-</div>
+
+<div class="delivery-note">
+
+سعر التوصيل يتم تأكيده حسب الولاية.
 
 </div>
 
+</div>
 
-<button class="whatsapp-btn" type="submit">
+
+<div class="payment-box">
+
+💵 طريقة الدفع:
+<strong>
+الدفع عند الاستلام
+</strong>
+
+</div>
+
+
+<button
+class="whatsapp-order"
+type="submit">
+
 إرسال الطلب عبر WhatsApp
+
 </button>
 
+
 </form>
+
+</div>
 
 </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<div class="footer-inner">
+<div class="footer-grid">
+
 
 <div class="footer-brand">
 
-<img src="logo.png" alt="VELORA">
+<img
+src="file_0000000085f881f49a05afd1571aba10.png"
+alt="VELORA">
 
-<h3>VELORA MONTRES</h3>
+<h3>
+VELORA MONTRES
+</h3>
 
 <p>
-ساعات رجالية ونسائية بتصاميم مختارة،
-مع التوصيل والدفع عند الاستلام.
+
+ساعات رجالية ونسائية بتصاميم مختارة، مع التوصيل والدفع عند الاستلام.
+
 </p>
 
 </div>
@@ -993,35 +1483,52 @@ placeholder="الحي، الشارع، رقم المنزل أو أي معلوم�
 
 <div>
 
-<h4 style="color:white;margin-bottom:14px">
+<div class="footer-title">
 روابط
-</h4>
+</div>
 
-<a href="#home">الرئيسية</a>
-<a href="#products">الساعات</a>
-<a href="#about">من نحن</a>
-<a href="#order">اطلب الآن</a>
+<a href="#home">
+الرئيسية
+</a>
+
+<a href="#products">
+الساعات
+</a>
+
+<a href="#about">
+من نحن
+</a>
+
+<a href="#order">
+اطلب الآن
+</a>
 
 </div>
 
 
 <div>
 
-<h4 style="color:white;margin-bottom:14px">
+<div class="footer-title">
 خدمة الزبائن
-</h4>
+</div>
 
-<a href="https://wa.me/213772228663">
+<a
+href="https://wa.me/213772228663"
+target="_blank">
+
 WhatsApp
+
 </a>
 
-<p style="margin-top:10px">
+<p>
 0772 22 86 63
 </p>
 
 </div>
 
+
 </div>
+
 
 <div class="copyright">
 
@@ -1032,110 +1539,204 @@ WhatsApp
 </footer>
 
 
+<!-- FLOATING WHATSAPP -->
+
 <a
 class="float-whatsapp"
 href="https://wa.me/213772228663"
 target="_blank"
 aria-label="WhatsApp">
+
 💬
+
 </a>
 
 
 <script>
 
+/* =========================
+   PRODUCT FILTER
+========================= */
+
+function filterProducts(category,button){
+
+    let products =
+    document.querySelectorAll(".product");
+
+    products.forEach(function(product){
+
+        if(
+            category === "all" ||
+            product.dataset.category === category
+        ){
+
+            product.style.display="block";
+
+        }else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(function(btn){
+
+        btn.classList.remove("active");
+
+    });
+
+    button.classList.add("active");
+
+}
+
+
+/* =========================
+   PRODUCT ORDER
+========================= */
+
 let selectedPrice = 2600;
+
 
 function selectProduct(name,price){
 
-  selectedPrice = price;
+    selectedPrice = price;
 
-  document.getElementById("product").value = name;
+    document.getElementById("product").value =
+    name;
 
-  document.getElementById("quantity").value = 1;
+    document.getElementById("quantity").value =
+    1;
 
-  updateTotal();
+    updateTotal();
 
-  document.getElementById("order").scrollIntoView({
-    behavior:"smooth"
-  });
+    document
+    .getElementById("order")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
+
+/* =========================
+   TOTAL
+========================= */
 
 function updateTotal(){
 
-  let quantity =
-  parseInt(document.getElementById("quantity").value);
+    let quantity =
+    parseInt(
+        document.getElementById("quantity").value
+    );
 
-  let total =
-  selectedPrice * quantity;
+    let total =
+    selectedPrice * quantity;
 
-  document.getElementById("qtyDisplay").innerText =
-  quantity;
 
-  document.getElementById("total").innerText =
-  total.toLocaleString("fr-FR")+" دج";
+    document.getElementById("qtyDisplay").innerText =
+    quantity;
+
+
+    document.getElementById("unitPrice").innerText =
+    selectedPrice.toLocaleString("fr-FR")
+    +" دج";
+
+
+    document.getElementById("total").innerText =
+    total.toLocaleString("fr-FR")
+    +" دج";
 
 }
 
 
+/* =========================
+   WHATSAPP ORDER
+========================= */
+
 function sendOrder(event){
 
-  event.preventDefault();
-
-  let name =
-  document.getElementById("name").value;
-
-  let phone =
-  document.getElementById("phone").value;
-
-  let product =
-  document.getElementById("product").value;
-
-  let quantity =
-  document.getElementById("quantity").value;
-
-  let wilaya =
-  document.getElementById("wilaya").value;
-
-  let commune =
-  document.getElementById("commune").value;
-
-  let address =
-  document.getElementById("address").value;
-
-  let total =
-  selectedPrice * parseInt(quantity);
+    event.preventDefault();
 
 
-  let message =
-`🛍️ طلب جديد من موقع VELORA MONTRES
+    let name =
+    document.getElementById("name").value;
+
+
+    let phone =
+    document.getElementById("phone").value;
+
+
+    let product =
+    document.getElementById("product").value;
+
+
+    let quantity =
+    parseInt(
+        document.getElementById("quantity").value
+    );
+
+
+    let wilaya =
+    document.getElementById("wilaya").value;
+
+
+    let commune =
+    document.getElementById("commune").value;
+
+
+    let address =
+    document.getElementById("address").value;
+
+
+    let total =
+    selectedPrice * quantity;
+
+
+    let message =
+`🛍️ طلب جديد - VELORA MONTRES
 
 ⌚ المنتج: ${product}
 🔢 الكمية: ${quantity}
-💰 سعر الوحدة: ${selectedPrice} دج
-💵 المجموع: ${total} دج
+
+💰 سعر الوحدة: ${selectedPrice.toLocaleString("fr-FR")} دج
+💵 المجموع بدون التوصيل: ${total.toLocaleString("fr-FR")} دج
 
 👤 الاسم واللقب: ${name}
-📞 الهاتف: ${phone}
+📞 رقم الهاتف: ${phone}
+
 📍 الولاية: ${wilaya}
 🏙️ البلدية: ${commune}
 🏠 العنوان: ${address}
 
-💵 الدفع: عند الاستلام
+💵 طريقة الدفع: الدفع عند الاستلام
 
-يرجى تأكيد سعر التوصيل والطلب.`;
+يرجى تأكيد الطلب وسعر التوصيل.`;
 
 
-  let url =
-  "https://wa.me/213772228663?text="
-  + encodeURIComponent(message);
+    let whatsappNumber =
+    "213772228663";
 
-  window.open(url,"_blank");
+
+    let url =
+    "https://wa.me/"
+    + whatsappNumber
+    + "?text="
+    + encodeURIComponent(message);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
 
 }
 
 </script>
 
+
 </body>
-</html> 
+</html>
